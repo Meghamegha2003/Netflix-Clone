@@ -1,77 +1,88 @@
 .login {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-                url(/background_banner.jpg);
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("/background_banner.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
+/* Netflix logo */
 .login-logo {
     position: absolute;
-    top: 20px;
-    left: 40px;
+    top: 25px;
+    left: 50px;
     width: 150px;
 }
 
+/* Form container */
 .login-form {
     background: rgba(0, 0, 0, 0.75);
-    padding: 60px;
-    border-radius: 5px;
+    padding: 60px 68px 40px;
+    border-radius: 4px;
     width: 100%;
-    max-width: 380px;
-    color: white;
+    max-width: 450px;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
 .login-form h1 {
-    margin-bottom: 25px;
     font-size: 32px;
     font-weight: 600;
+    margin-bottom: 28px;
 }
 
+/* Input fields */
 .login-form input {
     width: 100%;
-    padding: 15px;
+    height: 50px;
     margin-bottom: 16px;
     border-radius: 4px;
     border: none;
     outline: none;
+    padding: 16px 20px;
     background: #333;
-    color: white;
+    color: #fff;
     font-size: 16px;
+}
+
+.login-form input:focus {
+    background: #454545;
 }
 
 .login-form input::placeholder {
-    color: #b3b3b3;
+    color: #8c8c8c;
 }
 
+/* Button */
 .login-form button {
     width: 100%;
-    padding: 14px;
-    background-color: #e50914;
+    height: 50px;
+    background: #e50914;
+    border: none;
+    border-radius: 4px;
     color: white;
     font-size: 16px;
     font-weight: 600;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
 }
 
 .login-form button:hover {
-    background-color: #f6121d;
+    background: #f6121d;
 }
 
+/* Remember + Help */
 .form-help {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-size: 13px;
-    margin-top: 10px;
     color: #b3b3b3;
+    margin-top: 10px;
 }
 
 .remember {
@@ -80,11 +91,46 @@
     gap: 5px;
 }
 
-.form-help p {
-    cursor: pointer;
+.remember input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
 }
 
-.form-help p:hover {
+
+
+/* Switch text */
+.form-switch {
+    margin-top: 40px;
+    font-size: 16px;
+    color: #737373;
+}
+
+.form-switch span {
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.form-switch span:hover {
     text-decoration: underline;
 }
 
+/* Mobile Responsive like Netflix */
+@media (max-width: 768px) {
+
+    .login {
+        padding: 20px;
+    }
+
+    .login-logo {
+        width: 100px;
+        left: 20px;
+        top: 15px;
+    }
+
+    .login-form {
+        padding: 40px 30px;
+        max-width: 100%;
+    }
+}

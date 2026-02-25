@@ -95,6 +95,10 @@
     display: block;
 }
 
+.nav-dark{
+  background: #141414;
+}
+
 
 @media screen and (max-width: 768px) {
   .left_navbar ul {

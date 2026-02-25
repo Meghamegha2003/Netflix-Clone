@@ -1,0 +1,66 @@
+.player {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Back Arrow */
+.player img {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.player img:hover {
+    transform: scale(1.1);
+}
+
+/* Video */
+.player iframe {
+    width: 80%;
+    max-width: 1200px;
+    aspect-ratio: 16/8;
+    border-radius: 8px;
+}
+
+/* Info Section */
+.player-info {
+    width: 100%;
+    max-width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+    .player iframe {
+        width: 95%;
+        height: 40vh;
+    }
+
+    .player-info {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 13px;
+    }
+
+    .player img {
+        top: 15px;
+        left: 15px;
+        width: 28px;
+    }
+}
