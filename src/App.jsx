@@ -1,9 +1,14 @@
 import React from 'react'
-
+import Home from './components/pages/Home/Home'
+import Login from './components/pages/Login/Login'
+import { Routes,Route } from 'react-router-dom'
 function App() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/login' element={<Login/>} />
+      </Routes>
     </div>
   )
 }

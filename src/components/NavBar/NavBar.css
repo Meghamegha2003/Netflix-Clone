@@ -1,0 +1,138 @@
+.navBar {
+  position: fixed;   /* Netflix uses fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+
+  /* Real Netflix gradient */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.3) 70%,
+    transparent 100%
+  );
+
+  transition: background-color 0.4s ease;
+}
+
+.left_navbar {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 50px);
+  position: relative;
+}
+
+.left_navbar img {
+  width: clamp(60px, 10vw, 90px);
+}
+
+.left_navbar ul {
+  display: flex;
+  list-style: none;
+  gap: clamp(10px, 2vw, 20px);
+}
+
+.left_navbar ul li {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.right_navbar {
+  display: flex;
+  gap: clamp(10px, 2vw, 20px);
+  align-items: center;
+}
+
+.right_navbar .icons {
+  width: clamp(12px, 2vw, 15px);
+  cursor: pointer;
+}
+
+.right_navbar .profile {
+  border-radius: 4px;
+  width: clamp(30px, 4vw, 35px);
+}
+
+.navbarProfile {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 1vw, 10px);
+  cursor: pointer;
+  position: relative;
+}
+
+.navBar .dropdown{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    background: #191919;
+    padding: 18px 22px;
+    border-radius: 2px;
+    text-decoration: underline;
+    z-index: 1;
+    display: none;
+}
+
+.navBar .dropdown p{
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.navbarProfile:hover .dropdown{
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+  .left_navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+  }
+
+  .left_navbar ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navBar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .left_navbar img {
+    width: 60px;
+  }
+  .right_navbar .profile {
+    width: 30px;
+  }
+  .navBar {
+    padding: 8px 2%;
+  }
+}
