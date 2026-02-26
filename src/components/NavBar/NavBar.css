@@ -1,9 +1,9 @@
 .navBar {
-  position: fixed;   
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 4%;
+  padding: clamp(10px, 2vw, 20px) 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,8 @@
 }
 
 .left_navbar img {
-  width: clamp(60px, 10vw, 90px);
+  width: clamp(50px, 10vw, 90px);
+  height: auto;
 }
 
 .left_navbar ul {
@@ -39,11 +40,12 @@
 
 .left_navbar ul li {
   cursor: pointer;
+  font-size: clamp(12px, 1vw, 16px);
 }
 
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: clamp(20px, 4vw, 24px);
   cursor: pointer;
   color: #fff;
 }
@@ -55,13 +57,15 @@
 }
 
 .right_navbar .icons {
-  width: clamp(12px, 2vw, 15px);
+  width: clamp(12px, 2vw, 20px);
+  height: auto;
   cursor: pointer;
 }
 
 .right_navbar .profile {
   border-radius: 4px;
-  width: clamp(30px, 4vw, 35px);
+  width: clamp(25px, 4vw, 35px);
+  height: auto;
 }
 
 .navbarProfile {
@@ -72,32 +76,39 @@
   position: relative;
 }
 
-.navBar .dropdown{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: max-content;
-    background: #191919;
-    padding: 18px 22px;
-    border-radius: 2px;
-    text-decoration: underline;
-    z-index: 1;
-    display: none;
+.navBar .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: underline;
+  z-index: 100;
+  display: none;
 }
 
-.navBar .dropdown p{
-    font-size: 13px;
-    cursor: pointer;
+.navBar .dropdown p {
+  font-size: clamp(12px, 1vw, 14px);
+  cursor: pointer;
+  margin: 0.5rem 0;
 }
 
-.navbarProfile:hover .dropdown{
-    display: block;
+.navbarProfile:hover .dropdown {
+  display: block;
 }
 
-.nav-dark{
+.nav-dark {
   background: #141414;
 }
 
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 1024px) {
+  .left_navbar ul li {
+    font-size: clamp(11px, 1vw, 14px);
+  }
+}
 
 @media screen and (max-width: 768px) {
   .left_navbar ul {
@@ -105,10 +116,10 @@
     flex-direction: column;
     background: #000;
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 0.5rem 0;
     z-index: 10;
   }
 
@@ -124,18 +135,24 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 2%;
+    padding: clamp(8px, 2vw, 12px) 2%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .left_navbar img {
-    width: 60px;
+    width: clamp(40px, 15vw, 60px);
   }
+
   .right_navbar .profile {
-    width: 30px;
+    width: clamp(25px, 10vw, 30px);
   }
+
+  .hamburger {
+    font-size: clamp(18px, 6vw, 22px);
+  }
+
   .navBar {
-    padding: 8px 2%;
+    padding: clamp(6px, 2vw, 10px) 2%;
   }
 }
