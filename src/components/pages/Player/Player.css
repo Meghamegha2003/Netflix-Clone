@@ -9,7 +9,6 @@
     position: relative;
 }
 
-/* Back Arrow */
 .player img {
     position: absolute;
     top: 30px;
@@ -24,7 +23,6 @@
     transform: scale(1.1);
 }
 
-/* Video */
 .player iframe {
     width: 80%;
     max-width: 1200px;
@@ -32,7 +30,6 @@
     border-radius: 8px;
 }
 
-/* Info Section */
 .player-info {
     width: 100%;
     max-width: 85%;

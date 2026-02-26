@@ -11,7 +11,6 @@
     justify-content: center;
 }
 
-/* Netflix logo */
 .login-logo {
     position: absolute;
     top: 25px;
@@ -19,7 +18,6 @@
     width: 150px;
 }
 
-/* Form container */
 .login-form {
     background: rgba(0, 0, 0, 0.75);
     padding: 60px 68px 40px;
@@ -36,7 +34,6 @@
     margin-bottom: 28px;
 }
 
-/* Input fields */
 .login-form input {
     width: 100%;
     height: 50px;
@@ -58,7 +55,6 @@
     color: #8c8c8c;
 }
 
-/* Button */
 .login-form button {
     width: 100%;
     height: 50px;
@@ -99,7 +95,6 @@
 
 
 
-/* Switch text */
 .form-switch {
     margin-top: 40px;
     font-size: 16px;
@@ -116,7 +111,6 @@
     text-decoration: underline;
 }
 
-/* Mobile Responsive like Netflix */
 @media (max-width: 768px) {
 
     .login {

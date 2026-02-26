@@ -1,5 +1,5 @@
 .navBar {
-  position: fixed;   /* Netflix uses fixed */
+  position: fixed;   
   top: 0;
   left: 0;
   width: 100%;
@@ -9,7 +9,6 @@
   align-items: center;
   z-index: 1000;
 
-  /* Real Netflix gradient */
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.9) 0%,

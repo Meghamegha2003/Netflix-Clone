@@ -1,6 +1,6 @@
 .footer {
     padding: 50px 4%;
-    max-width: 1000px;   /* Increase width */
+    max-width: 1000px;   
     margin: 0 auto;
     color: #757575;
 }
@@ -16,7 +16,6 @@
     cursor: pointer;
 }
 
-/* Grid layout for links */
 .footer ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -40,14 +39,12 @@
     color: #757575;
 }
 
-/* Tablet */
 @media (max-width: 800px) {
     .footer ul {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile */
 @media (max-width: 500px) {
     .footer ul {
         grid-template-columns: 1fr;
