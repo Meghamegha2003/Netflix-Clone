@@ -30,7 +30,7 @@
 
 .hero-caption p {
     max-width: 100%;
-    font-size: 1rem; /* scalable font */
+    font-size: 1rem; 
     margin-bottom: 1.5rem;
 }
 
@@ -76,6 +76,12 @@
 
 .more-cards {
     padding-left: 5%;
+}
+
+.hero-caption .titleCard{
+     width: 100vw;
+    margin-left: calc(-1 * 5%);
+    padding-left: 10%;
 }
 
 @media (max-width: 1024px) {

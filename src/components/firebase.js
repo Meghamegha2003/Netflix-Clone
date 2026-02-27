@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut} from "firebase/auth"
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { toast } from "react-toastify";
@@ -16,11 +15,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth(app)
 const db = getFirestore(app)
 
 const signUp = async(name,email,password)=>{
+    
+    if(!name || name.trim()===""){
+        toast.error("Name cannot be empty")
+        return 
+    }
  try {
    const res = await createUserWithEmailAndPassword(auth,email,password)
    const user = res.user
@@ -30,6 +33,7 @@ const signUp = async(name,email,password)=>{
     authProvider: "local",
     email
 })
+toast("Sign Up Successfully")
  } catch (error) {
     console.log(error)
         toast.error(error.code.split('/')[1].split("-").join(" "))
@@ -38,8 +42,10 @@ const signUp = async(name,email,password)=>{
 
 
 const login = async(email,password)=>{
+
     try {
        await signInWithEmailAndPassword(auth,email,password)
+       toast("Login Successfully")
     } catch (error) {
         console.log(error)
         toast.error(error.code.split('/')[1].split("-").join(" "))
@@ -49,6 +55,7 @@ const login = async(email,password)=>{
 const logOut = async()=>{
     try {
        await signOut(auth)
+       toast("Logout Successfully")
     } catch (error) {
         console.log(error)
         toast.error(error)

@@ -17,7 +17,7 @@ useEffect(()=>{
   .then(res => res.json())
   .then(res => setApiData(res.results))
   .catch(err => console.error(err));
-},[category])
+},[])
 
   
   return (
@@ -25,7 +25,9 @@ useEffect(()=>{
         <h2>{title?title:"Popular on Netflix"}</h2>
         <div className="card-list" >
           {
-            apiData.map((card,index)=>{
+            apiData
+            .filter(card => card.backdrop_path) 
+            .map((card,index)=>{
               return <Link to={`/player/${card.id}`} className="card" key={index}>
                 <img src={`https://image.tmdb.org/t/p/w500`+card.backdrop_path} alt="" />
                 <p>{card.original_title}</p>

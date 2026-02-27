@@ -12,11 +12,13 @@
     display: flex;
     gap: 10px;
     overflow-x: scroll;
+     scrollbar-width: none;
 }
 
 .card-list::-webkit-scrollbar{
     display: none;
 }
+
 
 .card-list img{
     width: 240px;
@@ -35,6 +37,11 @@
     right: 10px;
     text-decoration: none;
     color: white;
+
+     white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;  
+    max-width: 90%;  
 }
 
 @media (max-width:800px) {
