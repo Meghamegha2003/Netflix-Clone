@@ -1,18 +1,158 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# 📱 React Marketplace App
 
-Currently, two official plugins are available:
+A modern marketplace web application built using **React.js**, where users can browse ads, post listings, and explore products with a clean and responsive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌐 Live Demo
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+👉 https://flixzone.web.app/login
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 📌 Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is a **frontend marketplace application** inspired by platforms like OLX.  
+Users can:
+
+- Browse advertisements
+- Post their own ads
+- View product details
+- Search and filter items
+
+---
+
+## 🚀 Features
+
+- 🏠 Home page with categorized listings
+- 🔍 Search functionality
+- 📍 Location-based UI
+- 📝 Post new ads
+- 📄 View detailed product pages
+- 📢 Promoted ads section
+- 🔐 User Authentication (Login / Signup UI)
+- 📱 Fully responsive design
+- ⚡ Fast performance with React
+
+---
+
+## 🛠️ Tech Stack
+
+### 💻 Frontend
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+### 🔥 Other Tools
+- Firebase (Authentication / Storage)
+- Context API (State Management)
+- React Router DOM (Routing)
+
+---
+
+## 📂 Folder Structure
+
+```bash
+src
+├── assets
+│
+├── components
+│   ├── ads
+│   ├── categories
+│   ├── common
+│   ├── home
+│   ├── layout
+│   │   ├── Footer
+│   │   └── Header
+│   │       ├── Location
+│   │       └── SearchBar
+│   │
+│   ├── auth
+│   │   ├── Login
+│   │   └── Signup
+│   │
+│   ├── myAd
+│   ├── postAd
+│   ├── promoted
+│   └── view
+│
+├── context
+│
+├── firebase
+│   └── config.js
+│
+├── pages
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   └── View.jsx
+│
+├── routes
+│   └── AppRoutes.jsx
+│
+├── services
+│   └── api.js
+│
+├── store
+│
+├── utils
+│   └── helpers.js
+│
+├── App.jsx
+├── index.js
+└── App.css
+````
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Meghamegha2003/Netflix-Clone.git
+cd my_clone
+```
+
+---
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3️⃣ Setup Firebase
+
+Create a Firebase project and add your config in:
+
+```bash
+src/firebase/config.js
+```
+
+---
+
+### 4️⃣ Run the app
+
+```bash
+npm start
+```
+
+👉 App runs on: http://localhost:5173/
+
+---
+
+## 🔗 Key Concepts Used
+
+* React Functional Components
+* Hooks (useState, useEffect, useContext)
+* Context API for global state
+* Component-based architecture
+* Routing with React Router
+
+---
