@@ -1,5 +1,4 @@
 
-````markdown
 # 📱 React Marketplace App
 
 A modern marketplace web application built using **React.js**, where users can browse ads, post listings, and explore products with a clean and responsive UI.
